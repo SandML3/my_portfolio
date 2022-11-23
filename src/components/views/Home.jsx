@@ -11,13 +11,20 @@ const Home = () => {
         </div>
       </header>
       <main className="home__main">
-        <div className="home__main__stars">
+        {/* <div className="home__main__stars">
           <div className="star1 star"></div>
           <div className="star2 star"></div>
           <div className="star3 star"></div>
           <div className="star4 star"></div>
-        </div>
+        </div> */}
         <section className="home__main__hero">
+          <div className="home__main__hero__stars">
+            <div className="star1 star"></div>
+            <div className="star2 star"></div>
+            <div className="star3 star"></div>
+            <div className="star4 star"></div>
+          </div>
+
           <h2 className="home__main__hero__subtitle">Web developer</h2>
           <h1 className="home__main__hero__title">Sandra Martín</h1>
           <div className="home__main__hero__image__container">
