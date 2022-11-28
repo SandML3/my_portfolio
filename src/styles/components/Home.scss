@@ -1,17 +1,21 @@
 @import '../core/variables.scss';
 
 .home {
-
+    //background-image: url(../../images/soft-wallpaper.png);
+    background-size: contain;
+    overflow: hidden;
+   
     &__header {
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         padding-right: 2rem;
-
+        
         max-width: 550px;
+        margin: 0 auto;
 
         &__icon {
             position: relative;
@@ -76,13 +80,12 @@
                 width: 100%;
                 height: 15rem;
                 background-image: url('../../images/cartoon_girl.svg');
-                background-blend-mode: overlay;
-                
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: top center ;
                 position: absolute;
                 bottom: 0;
+                //mix-blend-mode: hard-light;
             }
 
             &__image__container::after {
@@ -95,29 +98,30 @@
                 left: 0;
             }
 
+            // &__socialmedia {
+            //     margin: 0 auto;
+            //     width: 50%;
+            //     height: 100px;
+            //     position: relative;
+            //     top: 80%;
+            // }
+
             &__stars {
                 width: 100%;
                 position: absolute;
-                
-                .star {
-                    background-image: url('../../images/star.svg');
-                    filter: url('../../images/noise.svg');
-                    background-repeat: no-repeat;
-                    position: relative;
-                }
         
                 .star1 {
                     width: $star1-size;
                     height: $star1-size;
                     top: -40px;
-                    left: 240px;
+                    left: 60%;
                 }
     
                 .star2 {
                     width: $star2-size;
                     height: $star2-size;
                     top: -130px;
-                    left: 320px;
+                    left: 65%;
                 }
     
                 .star3 {
@@ -131,26 +135,116 @@
                     width: $star4-size;
                     height: $star4-size;
                     top: -20px;
-                    left: 350px;
+                    left: 80%;
                 }
             }   
         }
 
         &__about {
+            //mix-blend-mode: hard-light;
             background-color: rgb(45, 45, 45);
-            height: 50rem;
             width: 100%;
+            padding: 2rem;
 
-            // &__buble {
+            &__bubble {
+                //margin-top: 3rem;
+                //font-size: 1.1rem;
+                margin-bottom: 3rem;
+                height: 170px;
+                width: 200px;
+                background-image: url('../../images/bubble.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+               
+                &__text {
+                    position: relative;
+                    left: 45%;
+                    top: 30%;
+                    width: 50%;
+                }
+
+                &__text:last-child {
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                }
+            }
+
+            &__text {
+                width: 35%;
+                text-align: center;
+                color: white;
+                margin: 0 auto;
+                font-weight: 200;
+                margin-top: 0.5rem;
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+
+            &__text:first-of-type {
+                margin-top: 0;
+                font-weight: 400;
+                font-size: 1.2rem;
+            }
+
+            .arrow {
+                width: 8rem;
+                height: 8rem;
+                opacity: 0.6;
+                background-image: url('../../images/arrow.png');
+                background-position: center;
+                background-size: contain;
+                margin: 0 auto;
+                margin-top: 2rem;
+            }
+
+            .star5 {
+                filter: brightness(10);
+                width: $star5-size;
+                height: $star5-size;
+                right: -85%;
+                top: 0px;
+            }
+
+            &__illustrationContainer {
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 0rem;
+                margin-left: 2rem;
+            }
+
+            &__illustration {
+                width: 100%;
+                transform: rotate(-5deg);
+                margin: 0 auto; 
+            }
+
+            &__description {
+                color: rgba(255, 255, 255, 0.802);
+                position: relative;
+                font-size: 1.3rem;
+                top: -50px;
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                line-height: 1.5rem;
                 
-            // }
+                .highlight {
+                    color: white;
+                    
+                }
+
+            }
         }
     }
+}
 
-       
+.fa-brands {
+    color: white;
+}
 
-        
-
-  
-
+.star {
+    background-image: url('../../images/star.svg');
+    background-repeat: no-repeat;
+    position: relative;
 }
