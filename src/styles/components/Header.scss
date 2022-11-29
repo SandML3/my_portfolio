@@ -1,0 +1,20 @@
+@import '../core/variables.scss';
+
+.header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    
+    max-width: 550px;
+
+    &__menu-icon {
+       padding: 1rem;
+       position: relative;
+       left: 85%;
+       overflow: visible;
+    
+    
+    }
+        
+}

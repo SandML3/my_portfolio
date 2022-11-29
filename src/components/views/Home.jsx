@@ -1,17 +1,9 @@
 import "../../styles/components/Home.scss";
-import myPotho from "../../images/myself.png";
+import myPhoto from "../../images/myself.png";
 
 const Home = () => {
   return (
     <div className="home">
-      <header className="home__header">
-        <div className="home__header__icon">
-          <div className="home__header__icon__bar--top icon__bar"></div>
-          <div className="home__header__icon__bar--middle icon__bar"></div>
-          <div className="home__header__icon__bar--bottom icon__bar"></div>
-        </div>
-      </header>
-
       <main className="home__main">
         <section className="home__main__hero">
           <div className="home__main__hero__stars">
@@ -51,7 +43,7 @@ const Home = () => {
           <div className="home__main__about__illustrationContainer">
             <img
               className="home__main__about__illustration"
-              src={myPotho}
+              src={myPhoto}
               alt="Selfportrait"
               title="Selfportrait"
             />

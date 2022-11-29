@@ -4,49 +4,6 @@
     //background-image: url(../../images/soft-wallpaper.png);
     background-size: contain;
     overflow: hidden;
-   
-    &__header {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 2rem;
-        
-        max-width: 550px;
-        margin: 0 auto;
-
-        &__icon {
-            position: relative;
-
-            .icon__bar {
-                width: 5px;
-                border-radius: 3px;
-                transform: rotate(40deg);
-                background-color: $main-color;
-            }
-
-            &__bar--top {
-                position: relative;
-                right: 8px;
-                top: 18px;
-                height: 15px;
-            }
-
-            &__bar--middle {
-                height: 35px;
-            }
-
-            &__bar--bottom {
-                position: relative;
-                right: -8px;
-                top: -18px;
-                height: 15px;
-            }
-        }
-    }
-
 
     &__main {
 
