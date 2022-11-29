@@ -3,9 +3,10 @@ import { Route, Routes } from "react-router-dom";
 import { motion, useCycle } from "framer-motion";
 
 import Home from "./views/Home";
+import Header from "./commons/Header";
+import Menu from "./views/Menu";
 
 import "../styles/App.scss";
-import Header from "./views/Header";
 
 function App() {
   const [isOpen, toggleOppen] = useCycle(false, true);
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <motion.nav animate={isOpen ? "open" : "closed"}>
         <Header toggle={() => toggleOppen()} />
+        {isOpen && <Menu animate={isOpen ? "open" : "closed"} />}
       </motion.nav>
       <Routes>
         <Route path="/" element={<Home />} />

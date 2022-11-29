@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+//import { Link } from "react-router-dom";
 
 import "../../styles/components/Header.scss";
 
@@ -25,43 +26,43 @@ const Header = ({ toggle }) => {
         <Path
           d="M 4 8 L 8 4"
           variants={{
-            closed: { opacity: 1 },
-            open: { x: 100, y: -100 },
+            closed: { x: [0, 100, 0], y: [0, -100, 0], d: "M 4 8 L 8 4" },
+            open: {
+              x: [0, 100, 0],
+              y: [0, -100, 0],
+              d: "M 4 4 L 13 13",
+            },
           }}
-          transition={{ duration: 1.3 }}
+          transition={{ duration: 0.75 }}
         />
         <Path
           d="M 4 15 L 15 4"
           variants={{
-            closed: { opacity: 1 },
-            open: { x: 100, y: -100 },
+            closed: { x: [100, 0], y: [-100, 0], d: "M 4 15 L 15 4" },
+            open: {
+              opacity: 0.9,
+              x: [100, 0],
+              y: [-100, 0],
+              d: "M 4 13 L 13 4",
+            },
           }}
           transition={{ duration: 0.5 }}
         />
         <Path
           d="M 11.5 15 L 15 11.5"
           variants={{
-            closed: { opacity: 1 },
-            open: { x: 100, y: -100 },
+            closed: { x: [100, 0], y: [-100, 0] },
+            open: {
+              x: [100, 0],
+              y: [-100, 0],
+              d: "M 9 18 L 9 18",
+              opacity: 0.6,
+            },
           }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1.25 }}
         />
       </svg>
     </header>
-    // <header className="header">
-    //   <div className="header__icon__container">
-    //     <div className="header__icon">
-    //       <motion.div
-    //         className="header__icon__bar--top icon__bar"
-    //         initial={{ rotate: "40deg" }}
-    //         whileTap={variants.closed}
-    //         transition={{ duration: 1 }}
-    //       />
-    //       <motion.div className="header__icon__bar--middle icon__bar" />
-    //       <motion.div className="header__icon__bar--bottom icon__bar" />
-    //     </div>
-    //   </div>
-    // </header>
   );
 };
 export default Header;
