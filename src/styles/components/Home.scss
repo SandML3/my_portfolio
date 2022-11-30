@@ -51,17 +51,24 @@
                 height: 30px;
                 width: 100%;
                 position: absolute;
+                // z-index: 0;
                 bottom: -10px;
                 left: 0;
             }
 
-            // &__socialmedia {
-            //     margin: 0 auto;
-            //     width: 50%;
-            //     height: 100px;
-            //     position: relative;
-            //     top: 80%;
-            // }
+            &__socialmedia {
+                margin: 0 auto;
+                width: 50%;
+                height: 100px;
+                position: relative;
+                top: 75%;
+                font-size: 1.2rem;
+                opacity: 0.9;
+                display: flex;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
 
             &__stars {
                 width: 100%;
@@ -111,7 +118,6 @@
                 position: relative;
                 bottom: -130px;
                 left: 10px;
-                
             }
 
             &__bubble {

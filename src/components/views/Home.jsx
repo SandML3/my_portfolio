@@ -40,10 +40,32 @@ const Home = () => {
 
           <h2 className="home__main__hero__subtitle">Web developer</h2>
           <h1 className="home__main__hero__title">Sandra Martín</h1>
+
           <div className="home__main__hero__image__container">
-            {/* <div className="home__main__hero__socialmedia">
-              <i class="fa-brands fa-github-alt"></i>
-            </div> */}
+            <ul className="home__main__hero__socialmedia">
+              <motion.li whileHover={{ y: -10, scale: 1.1 }}>
+                <a
+                  className="link"
+                  href="https://github.com/SandML3"
+                  title="GitHub"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-brands fa-github-alt"></i>
+                </a>
+              </motion.li>
+              <motion.li whileHover={{ y: -10, scale: 1.1 }}>
+                <a
+                  className="link"
+                  href="https://www.linkedin.com/in/sandramartinlopez/"
+                  title="Linkedin"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </motion.li>
+            </ul>
           </div>
         </section>
 
