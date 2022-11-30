@@ -6,20 +6,16 @@ const Menu = () => {
   return (
     <motion.main
       className="menu"
-      whileTap={{}}
-      initial="hidden"
-      variants={{
-        open: {
-          y: [-200, 40, 0],
-          transition: {
-            type: "spring",
-            staggerChildren: 0.1,
-            delayChildren: 0.8,
-            duration: 1,
-          },
-        },
-        closed: {
-          y: [-10, 0],
+      exit={{
+        y: -500,
+        transition: { duration: 0.5 },
+      }}
+      animate={{
+        y: [-200, 40, 0],
+        transition: {
+          type: "spring",
+          staggerChildren: 0.1,
+          delayChildren: 0.8,
         },
       }}
       transition={{ ease: "easeOut", duration: 0.5 }}

@@ -48,10 +48,10 @@
             &__image__container::after {
                 content: '';
                 background-color: rgb(45, 45, 45);
-                height: 10px;
+                height: 30px;
                 width: 100%;
                 position: absolute;
-                bottom: 0;
+                bottom: -10px;
                 left: 0;
             }
 
@@ -101,11 +101,20 @@
             //mix-blend-mode: hard-light;
             background-color: rgb(45, 45, 45);
             width: 100%;
-            padding: 2rem;
+            padding: 1rem 2rem;
+
+            &__smallBubble {
+                background-color: white;
+                width: 15px;
+                height: 13px;
+                border-radius: 50%;
+                position: relative;
+                bottom: -130px;
+                left: 10px;
+                
+            }
 
             &__bubble {
-                //margin-top: 3rem;
-                //font-size: 1.1rem;
                 margin-bottom: 3rem;
                 height: 170px;
                 width: 200px;
@@ -132,9 +141,8 @@
                 text-align: center;
                 color: white;
                 margin: 0 auto;
-                font-weight: 200;
                 margin-top: 0.5rem;
-                font-weight: 700;
+                font-weight: 500;
                 font-size: 1.5rem;
             }
 
@@ -145,8 +153,8 @@
             }
 
             .arrow {
-                width: 8rem;
-                height: 8rem;
+                width: 6rem;
+                height: 6rem;
                 opacity: 0.6;
                 background-image: url('../../images/arrow.png');
                 background-position: center;

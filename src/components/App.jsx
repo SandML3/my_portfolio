@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import { motion, useCycle } from "framer-motion";
+import { motion, useCycle, AnimatePresence } from "framer-motion";
 
 import Home from "./views/Home";
 import Header from "./commons/Header";
@@ -15,8 +15,9 @@ function App() {
     <div className="App">
       <motion.nav animate={isOpen ? "open" : "closed"}>
         <Header toggle={() => toggleOppen()} />
-        {isOpen && <Menu animate={isOpen ? "open" : "closed"} />}
+        <AnimatePresence> {isOpen && <Menu />}</AnimatePresence>
       </motion.nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
