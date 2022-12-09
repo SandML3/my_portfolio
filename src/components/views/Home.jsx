@@ -3,6 +3,8 @@ import Typewriter from "typewriter-effect";
 
 import "../../styles/components/Home.scss";
 import myPhoto from "../../images/myself.png";
+import { useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
   const defaultTransition = {
@@ -10,6 +12,16 @@ const Home = () => {
     repeatType: "reverse",
     duration: 1,
   };
+
+  const routePath = useLocation();
+  const aboutSection = useRef();
+
+  useEffect(() => {
+    console.log(aboutSection);
+    if (routePath.pathname === "/about") {
+      aboutSection.current.scrollIntoView();
+    }
+  }, [routePath]);
 
   return (
     <div className="home">
@@ -51,7 +63,7 @@ const Home = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="fa-brands fa-github-alt"></i>
+                  <i className="fa-brands fa-github-alt"></i>
                 </a>
               </motion.li>
               <motion.li whileHover={{ y: -10, scale: 1.1 }}>
@@ -62,7 +74,7 @@ const Home = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="fa-brands fa-linkedin"></i>
+                  <i className="fa-brands fa-linkedin"></i>
                 </a>
               </motion.li>
             </ul>
@@ -123,7 +135,10 @@ const Home = () => {
             transition={defaultTransition}
           ></motion.div>
 
-          <div className="home__main__about__illustrationContainer">
+          <div
+            className="home__main__about__illustrationContainer"
+            ref={aboutSection}
+          >
             <img
               className="home__main__about__illustration"
               src={myPhoto}

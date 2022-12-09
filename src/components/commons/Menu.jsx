@@ -24,6 +24,11 @@ const Menu = ({ toggleOppen }) => {
       <nav className="menu__wrapper">
         <ul className="menu__options">
           <li className="menu__options__item">
+            <Link className="link" to="/" onClick={toggleOppen}>
+              Home
+            </Link>
+          </li>
+          <li className="menu__options__item">
             <Link className="link" to="/about" onClick={toggleOppen}>
               About me
             </Link>

@@ -1,6 +1,9 @@
 @import './core/reset.scss';
 
 .App {
+    margin: 0 auto;
     min-width: 390px;
     max-width: 550px;
+    background-image: url(../images/texture.png);
+    background-size: 40%;
 }
